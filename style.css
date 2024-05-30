@@ -1,0 +1,147 @@
+@font-face {
+    font-family: "bebas";
+    src: url("fonts/BebasNeue-Regular.ttf");
+}
+
+@font-face {
+    font-family: "poetsen";
+    src: url("fonts/PoetsenOne-Regular.ttf");
+}
+
+
+body{
+    font-family: "bebas";
+    display: flex;
+    height: 90vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url(pictures/background.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.startWindow{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 22vh;
+}
+
+.start-text{
+    color: white;
+    font-size: 3rem;
+}
+
+.start{
+    background-color: red;
+    padding: 5px 30px;
+    box-shadow: 3px 3px 2px;
+    border-radius: 10px;
+    
+}
+
+.start:hover{
+    transform: scale(1.05);
+    box-shadow: none;
+}
+
+button{
+    cursor: pointer;
+}
+
+@keyframes shadows {
+    0% { box-shadow: 3px -3px 4px 2px #48abe0; }
+    10% { box-shadow: 3px 0px 4px 2px #48abe0; }
+    20% { box-shadow: 3px 3px 4px 2px #48abe0;}
+    30% { box-shadow: 3px 3px 4px 2px #48abe0;}
+    40% { box-shadow: 0px 3px 4px 2px #48abe0;}
+    50% { box-shadow: -3px 3px 4px 2px #48abe0;}
+    60% { box-shadow: -3px 3px 4px 2px #48abe0;}
+    70% { box-shadow: -3px 0px 4px 2px #48abe0;}
+    80% { box-shadow: -3px -3px 4px 2px #48abe0;}
+    90% { box-shadow: -3px -3px 4px 2px #48abe0;}
+    100% { box-shadow: 0px -3px 4px 2px #48abe0; }
+}
+
+dialog[open] {
+    opacity: 1;
+    transform: scaleY(1);
+    width: 70vw;
+    height: 90vh;
+    animation: shadows 5s infinite;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+dialog::backdrop{
+    background-color: rgba(75, 116, 105, 0.4);
+}
+
+dialog .close{
+    background-color: #48abe0;
+    border: none;
+    border-radius: 3px;
+    margin-left: auto;
+    place-self: start;
+}
+
+.choice{
+    margin-top: 10vh;
+}
+
+.symbols{
+    padding: 0;
+    /* border: 3px groove grey; */
+    
+}
+
+button.symbol{
+    font-family: "poetsen";
+    font-size: 50px;
+    box-sizing: border-box;
+    display: inline-block;
+    border: none;
+    background: white;
+    width: 40%;
+    height: 80px;
+    margin: 10px;
+    box-shadow: 0px 5px 10px -2px;
+}
+
+button.symbol.X{
+    background-color: rgb(60, 194, 33);
+}
+
+button.symbol.O{
+    background: #3ba4dd;
+    margin-left: -2px;
+}
+
+@keyframes spin-on-hover {
+    100% {
+      transform: rotate(360deg);
+    }
+}
+
+
+button.symbol:hover{
+    transform: scale(1.1);
+}
+
+.spin:hover{
+    animation: spin-on-hover 0.25s linear forwards;
+}
+
+h2{
+    font-weight: 400;
+}
+
+em{
+    text-decoration: underline
+}
+
+.symbol{
+    font-family: "poetsen";
+}

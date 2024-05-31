@@ -73,6 +73,7 @@ dialog[open] {
     display: flex;
     flex-direction: column;
     align-items: center;
+    border: none;
 }
 
 dialog::backdrop{
@@ -93,11 +94,10 @@ dialog .close{
 
 .symbols{
     padding: 0;
-    /* border: 3px groove grey; */
     
 }
 
-button.symbol{
+.choice button.symbol{
     font-family: "poetsen";
     font-size: 50px;
     box-sizing: border-box;
@@ -126,7 +126,7 @@ button.symbol.O{
 }
 
 
-button.symbol:hover{
+.choice button.symbol:hover{
     transform: scale(1.1);
 }
 
@@ -136,6 +136,7 @@ button.symbol:hover{
 
 h2{
     font-weight: 400;
+    align-self: center;
 }
 
 em{
@@ -144,4 +145,71 @@ em{
 
 .symbol{
     font-family: "poetsen";
+}
+
+#symbol{
+    font-family: "poetsen";
+    /* margin */
+}
+
+.game{
+    margin-top: 20px;
+    font-size: 2rem;
+    display: none;
+    margin-top: 5vh;
+    flex-direction: column;
+    align-items: center;
+    color: #99CCFF;
+}
+
+.field{
+    /* border: none; */
+    border-radius: 10px;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
+}
+
+
+.field button{
+    border-radius: 10px;
+    box-shadow: 1px 5px 10px 0px rgba(153, 204, 255, 0.8), 3px 3px 10px black;
+    border: none;
+    background-color:#FFFFCC;
+    font-size: 3rem;
+}
+
+.field button:hover{
+    box-shadow: 3px 3px 6px 2px;
+    transform: scale(0.95);
+}
+.main{
+    display: flex;
+    margin-left: 190px;
+}
+
+.scores{
+    margin-left: 100px;
+    margin-top: 15px;
+    color: rgb(220, 223, 89);
+}
+
+#footer{
+    margin-top: 50px;
+    font-size: 2rem;
+    display: flex;
+    gap: 30px;
+}
+
+
+#reset{
+    margin-left: auto;
+    color: white;
+    margin: 0px 0px 0px auto;
+    padding: 8px 40px;
+    background: #2590ca;
+    border: none;
+    border-radius: 20px;
 }

@@ -16,11 +16,35 @@
             <div class="choice">
                 <h1>Make your choice :</h1>
                 <div class="symbols">
-                    <button class="symbol X"><div class="spin">X</span></button>
-                    <button class="symbol O"><div class="spin">O</span></button>
+                    <button class="symbol X" id="X" onclick="startGame('X')"><div class="spin">X</span></button>
+                    <button class="symbol O" id="Y" onclick="startGame('O')"><div class="spin">O</span></button>
                 </div>
+                <h2><em>NOTE</em> : <span class="symbol X">X</span> starts first</h2>
             </div>
-            <h2><em>NOTE</em> : <span class="symbol X">X</span> starts first</h2>
+            <div class="game">
+                <div class="info">You're <span id="symbol">X</span></div>
+                <div class="main">
+                    <div class="field">
+                        <button class="symbol" id="00"></button>
+                        <button class="symbol" id="01"></button>
+                        <button class="symbol" id="02"></button>
+                        <button class="symbol" id="10"></button>
+                        <button class="symbol" id="11"></button>
+                        <button class="symbol" id="12"></button>
+                        <button class="symbol" id="20"></button>
+                        <button class="symbol" id="21"></button>
+                        <button class="symbol" id="22"></button>
+                    </div>
+                    <div class="scores">
+                        <div class="X score"><span class="symbol" style="color: white">X</span> Score:<span id="XScore">0</div>
+                        <div class="O score"><span class=symbol style="color: white">O</span> Score:<span id="OScore">0</span></div>
+                    </div>
+                    
+                </div><div id="footer">
+                    <div class="result"></div>
+                    <button id="reset">Reset</button>
+                </div>
+            </div>            
         </dialog>
         <button class="start">START</button>
     </div>
